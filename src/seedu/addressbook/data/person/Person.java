@@ -84,4 +84,12 @@ public class Person implements ReadOnlyPerson {
         return getAsTextShowAll();
     }
 
+    public String getPrintableString(Printable... printables){
+        String details = "";
+        for (Printable printable : printables) {
+            details += printable.getPrintableString();
+        }
+        return details;
+    }
+
 }
